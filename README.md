@@ -9,3 +9,4 @@ https://blog.outsider.ne.kr/
 https://taes-k.github.io/docs/java  
 https://taes-k.github.io/docs/spring  
 https://haviyj.tistory.com/  
+https://www.slipp.net/
