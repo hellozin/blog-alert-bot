@@ -4,4 +4,4 @@
 ### 블로그 URL
 
 https://hellozin.github.io/  
-https://github.com/hellozin/blog-alert-bot/blob/master/test.md
+https://www.naver.com/
