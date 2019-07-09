@@ -41,7 +41,9 @@ if os.path.isfile('contents.txt'):
     old_contents = get_old_contents(file)
 
     for url in urls:
-        if url in old_contents and today_contents[url] != old_contents[url]:
+        if url not in old_contents:
+            sp.send(url + ' 이 알림 목록에 새로 추가되었습니다.')
+        elif today_contents[url] != old_contents[url]:
             sp.send(url + ' 이 업데이트 되었습니다.')
             
     file.close()
