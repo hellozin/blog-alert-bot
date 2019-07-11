@@ -34,7 +34,7 @@ def get_old_contents(file):
     return old_contents
 
 def send_updates(total_url_count, updated_urls, new_urls):
-    message = '총 ' + total_url_count + ' 개의 사이트 중 ' + len(updated_urls) + ' 개가 업데이트 되었습니다.'
+    message = '총 ' + str(total_url_count) + ' 개의 사이트 중 ' + str(len(updated_urls)) + ' 개가 업데이트 되었습니다.'
 
     for url in new_urls:
         message = message + '\n' + url + ' 이 알림 목록에 추가되었습니다.'
