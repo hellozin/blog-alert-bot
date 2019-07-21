@@ -23,10 +23,11 @@ def save_new_recruits(new_recruits):
     file.write(recruit + '\n')
 
 def send_updates(new_recruits):
-  message = '새 공고가 올라왔습니다.'
-  for recruit in new_recruits:
-    message = message + '\n' + recruit
-  sp.send(message)
+  if len(new_recruits) > 0:
+    message = '새 공고가 올라왔습니다.'
+    for recruit in new_recruits:
+      message = message + '\n' + recruit
+    sp.send(message)
 
 def recruit_tostring(seq, link, title, level, due):
   return seq+' '+level+' '+title+' '+due+' '+base_url+link
@@ -35,6 +36,8 @@ line_html = requests.get(line_career_url).text
 
 soup = BeautifulSoup(line_html, 'html.parser')
 table = soup.select('body > div.container > div.jobs_wrap > table > tbody > tr')
+
+print(get_stored_seqs())
 
 new_recruits = []
 for tr in table:
